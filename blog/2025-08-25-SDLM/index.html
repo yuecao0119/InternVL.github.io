@@ -145,7 +145,7 @@
                   </span>
 
                   <span class="link-block">
-                    <a href="https://huggingface.co/OpenGVLab/SDLM" target="_blank"
+                    <a href="https://huggingface.co/collections/OpenGVLab/sdlm-68ac82709d7c343ad36aa552" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon" style="color:#ffffff">
                         🤗
@@ -295,7 +295,7 @@
 
             <ul type="1">
               <li><b>(a) Training pipeline</b>. <span style="font-size: 95%;">Reordered input enables structured mask with causal prefix (top-left), visible cross-block prefix (bottom-left), and intra-block bidirectional attention (bottom-right). </span></li>
-              <li><b>(b) Sampling Pipeline</b>. <span style="font-size: 95%;">Confidence-based dynamic block decoding with KV cache reuse. At each step, a block of B tokens is predicted with B-1 padding masks. The longest high-confidence prefix is selected as dynamic output. Cached KV states enable efficient decoding. </span></li>
+              <li><b>(b) Sampling Pipeline</b>. <span style="font-size: 95%;">Confidence-based dynamic block decoding with KV cache reuse. At each step, a block of D tokens is predicted with D - 1 padding masks. The longest high-confidence prefix is selected as dynamic output. Cached KV states enable efficient decoding. </span></li>
               <br>
             </ul>
 
@@ -365,7 +365,7 @@
         <div class="column is-full-width">
           <div class="content has-text-justified">
             <p>
-              Trade-off between performance and speed under different confidence thresholds τ for SDLM-3B (B=4) and SDLM-3B (B=8). By adjusting τ, a controllable trade-off between speed and performance can be achieved. SpeedUp denotes the average number of tokens output per forward pass.
+              Trade-off between performance and speed under different confidence thresholds τ for SDLM-3B (D=4) and SDLM-3B (D=8). By adjusting τ, a controllable trade-off between speed and performance can be achieved. SpeedUp denotes the average number of tokens output per forward pass.
 
               <!-- <ul type="1">
                 <li><b>(1) 200<i>k</i> for multimodal understanding</b>. <span style="font-size: 95%;">These samples
