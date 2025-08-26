@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="static/image/your_banner_image.png" /> -->
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SDLM</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Sequential Diffusion Language Model</h1>
+            <!-- <h5 class="subtitle is-4 publication-awards">CVPR 2025</h5> -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?"
+                  style="color:#f68946;font-weight:normal;">Author*</a>
+                <!-- <a href="https://scholar.google.com/citations?hl=en&user=EyZqU9gAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Gen Luo*</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=321C4TQAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Ganlin Yang*</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=cWip8QgAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Ziyang Gong*</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=pRJXjSUAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Guanzhou Chen*</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=4zO4UlcAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Haonan Duan</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=MRTB_-wAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Erfei Cui</a>,
+                <br>
+                <a href="https://internvl.github.io/blog/2025-05-26-VeBrain/"
+                  style="color:#f68946;font-weight:normal;">Ronglei Tong</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=vpjnH7AAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Zhi Hou</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=y6xT-xYAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Tianyi Zhang</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=j1rq_lYAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Zhe Chen</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=IX_lIFIAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Shenglong Ye</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=zdgKJXIAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Lewei Lu</a>,
+                <br>
+                <a href="https://scholar.google.com/citations?hl=en&user=GStTsxAAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Jingbo Wang</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=WM0OglcAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Wenhai Wang</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=SH_-B_AAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Jifeng Dai</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=gFtI-8QAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Yu Qiao</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=lRSD7PQAAAAJ"
+                  style="color:#f68946;font-weight:normal;">Rongrong Ji</a>,
+                <a href="https://scholar.google.com/citations?hl=en&user=02RXI00AAAAJ"
+                  style="color:#f68946;font-weight:normal;">Xizhou Zhu</a> -->
+              </span>
+
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><b style="color:#008AD7; font-weight:normal">▶ </b> Shanghai AI
+                  Laboratory</span>
+                <span class="author-block"><b style="color:#bb52ff; font-weight:normal">▶ </b> Nanjing University</span>
+                <br>
+                <span class="author-block"><b style="color:#F2A900; font-weight:normal">▶ </b> Tsinghua
+                  University</span>
+                <span class="author-block"><b style="color:#f68946; font-weight:normal">▶ </b> University of Science and
+                  Technology of China</span>
+                  <span class="author-block"><b style="color:#17de2e; font-weight:normal">▶ </b> Xiamen University</span>
+                <br>
+                <span class="author-block"><b style="color:#ff481c; font-weight:normal">▶ </b> Shanghai Jiao Tong
+                  University</span>
+                <span class="author-block"><b style="color:#0f24dd; font-weight:normal">▶ </b> SenseTime Research</span>
+                <span class="author-block"><b style="color:#00f2c2; font-weight:normal">▶ </b> Zhejiang
+                  University</span>
+                <div class="is-size-6 publication-authors">
+                  <span class="author-block"><b>*</b> Equal contribution.</span>
+                </div>
+              </div>
+
+              <div class="column has-text-centered">
+
+
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon" style="color:#ffffff">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span style="color:#ffffff">arXiv</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://github.com/OpenGVLab/SDLM" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon" style="color:#ffffff">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span style="color:#ffffff">Code</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://huggingface.co/OpenGVLab/SDLM" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon" style="color:#ffffff">
+                        🤗
+                      </span>
+                      <span style="color:#ffffff">Model</span>
+                    </a>
+                  </span>
+
+                  <!-- <i class="fas fa-download"></i> -->
+                  <!-- <span class="link-block">
+                  <a href="https://internvl.github.io/blog/2025-05-26-VeBrain/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon" style="color:#ffffff">
+                      <i class="fas fa-edit"></i>
+                    </span>
+                    <span style="color:#ffffff">Chinese Post</span>
+                  </a>
+                </span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  
+  <!-- Paper abstract -->
+  <section class="section" style="background-color:#ffffffff">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <!-- Paper video. -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <!-- <h2 class="title is-3"></h2> -->
+
+              <video id="dollyzoom" autoplay controls muted playsinline height="100%">
+                <source src="static/videos/case_long.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!-- <br> -->
+          <br>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Diffusion language models (DLMs) have gained attention for their potential in contextual consistency and efficient decoding. However, existing DLMs introduce more distribution shifts due to missing contextual information, resulting in increased training cost and low prediction efficiency. We propose a <b>S</b>equential <b>D</b>iffusion <b>L</b>anguage <b>M</b>odel (<b>SDLM</b>), to cheaply stimulate the parallel prediction capabilities of diffusion models. Specifically, SDLM reduces distribution shift by limiting the prediction range to a fixed block length and enforces decoding order through the longest prefix decoding method, thereby significantly improving prediction efficiency while ensuring generation quality. Our method can be viewed as a further generalization of the autoregressive (AR) paradigm. Therefore, it is possible to use pre-trained AR weights and quickly migrate to the diffusion framework with only minimal instruction fine-tuning. Experimental results show that our 3B model significantly outperforms existing larger-scale diffusion models and achieves more than 2 times efficiency acceleration. Moreover, we have for the first time expanded the open source diffusion language model to a remarkable 32B parameters, demonstrating the great potential of our model paradigm in scaling up.
+            </p>
+
+            <div style="text-align: center;">
+              <img id="mono_internvl" width="90%" src="static/images/three_framework.png">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <!-- Image carousel -->
+  <!-- <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              First image description.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Second image description.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Third image description.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Fourth image description.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End image carousel -->
+
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Another Carousel</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">\
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End video carousel -->
+
+
+  <section class="section" style="background-color:#efeff081">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Sequential Diffusion Language Model</h2>
+
+      </div>
+    </div>
+    <!-- </div> -->
+    <!--/ Results. -->
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="content has-text-justified">
+            <p>
+              We propose a sequential blockwise masked prediction method that reduces error accumulation in diffusion-based generation. Our method leverages the observation that predictions for tokens at lower positional indices typically benefit from more reliable contextual information, resulting in lower deviation and improved accuracy.
+
+            <ul type="1">
+              <li><b>(a) Training pipeline</b>. <span style="font-size: 95%;">Reordered input enables structured mask with causal prefix (top-left), visible cross-block prefix (bottom-left), and intra-block bidirectional attention (bottom-right). </span></li>
+              <li><b>(b) Sampling Pipeline</b>. <span style="font-size: 95%;">Confidence-based dynamic block decoding with KV cache reuse. At each step, a block of B tokens is predicted with B-1 padding masks. The longest high-confidence prefix is selected as dynamic output. Cached KV states enable efficient decoding. </span></li>
+              <br>
+            </ul>
+
+            <centering>
+              <div style="text-align: center;">
+                <img id="pipeline" width="90%" src="static/images/framework.png">
+              </div>
+            </centering>
+            
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Exp. -->
+  <section class="section" style="background-color:#ffffffff">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Performance</h2>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-4">Long-Form Benchmarks</h2>
+          <p>
+            SDLM delivers strong performance with significantly faster decoding speed. It operates approximately 2x faster than comparable autoregressive models while matching their accuracy, and achieves up to 5x speedup over other diffusion language models, as evidenced by results on the MATH-500 benchmark.
+          </p>
+          <div style="text-align: center;">
+            <img id="ablation" width="70%" src="static/images/main_exp1.png">
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-4">General Mutiple-Choice Benchmarks</h2>
+          <div style="text-align: center;">
+            <img id="multimodal" width="70%" src="static/images/main_exp2.png">
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-4">Self-Speculative Decoding</h2>
+          <div style="text-align: center;">
+            <img id="multimodal" width="70%" src="static/images/self_speculative_decoding.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stade off. -->
+  <section class="section" style="background-color:#efeff081">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Trade-off Between Performance and Speed</h2>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="content has-text-justified">
+            <p>
+              Trade-off between performance and speed under different confidence thresholds τ for SDLM-3B (B=4) and SDLM-3B (B=8). By adjusting τ, a controllable trade-off between speed and performance can be achieved. SpeedUp denotes the average number of tokens output per forward pass.
+
+              <!-- <ul type="1">
+                <li><b>(1) 200<i>k</i> for multimodal understanding</b>. <span style="font-size: 95%;">These samples
+                    integrate images, videos, and text, sourced from datasets such as ShareGPT4V and MMInstruct.</span>
+                </li>
+                <li><b>(2) 312<i>k</i> for spatial reasoning</b>. <span style="font-size: 95%;">Generated using ScanNet
+                    point cloud data, these samples cover tasks involving counting, measuring distances, object sizes, and
+                    other forms of spatial understanding.</span></li>
+                <li><b>(3) 88<i>k</i> for robot control</b>. <span style="font-size: 95%;">This module executes the
+                    collected control policies, such as sitting or grasping.</span></li>
+                <br>
+              </ul> -->
+
+            <centering>
+              <div style="text-align: center;">
+                <img id="pipeline" width="80%" src="static/images/ablation_tau.png">
+              </div>
+            </centering>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
+
+        <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
+        </iframe>
+
+      </div>
+    </div>
+  </section> -->
+  <!--End paper poster -->
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
